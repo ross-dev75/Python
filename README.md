@@ -17,3 +17,6 @@ Day 04
 
 Day 05
 -- Create a password generator using lists, loops, and the random module.
+
+Day 06
+-- Today's task was various challenges using the Reeborg's World learning challenges on reeborg.ca - these were a lot of fun, and made me laugh the entire time. I would highly recommend them. I will not be giving away the solutions for these!
