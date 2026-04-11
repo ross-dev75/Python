@@ -20,3 +20,7 @@ Day 05
 
 Day 06
 -- Today's task was various challenges using the Reeborg's World learning challenges on reeborg.ca - these were a lot of fun, and made me laugh the entire time. I would highly recommend them. I will not be giving away the solutions for these!
+
+Day 07 -- Making a hangman game!
+
+Day 08 -- Creating a ceasar cipher, practicing input validation and rate limiting.
