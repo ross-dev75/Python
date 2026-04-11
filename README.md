@@ -1,4 +1,4 @@
-100 Days of Python!
+100 Days of Python (and learning how to use GitHub..) !
 
 Daily Python Practice from the ground up.
 
