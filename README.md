@@ -1,26 +1,19 @@
+<<<<<<< HEAD
 100 Days of Python !
+=======
+Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp by Angela Yu' on Udemy.com
+----------
+Taking this course to practice and refine my python skills!
+The programs on this github are mine and correspond to the daily challenges in this course during the time I was enrolled. Some of them were guided via course instruction, others were 'challenges' to show learning and comprehension.
+>>>>>>> c9466b6 (Day 09 and README update)
 
-Daily Python Practice from the ground up.
 
-Day 01
--- Basic input/output and variable practice.
-
-Day 02
--- Basic tip calculator using numbers and simple math.
-
-Day 03
--- Task 01 - Basic 'Python Pizza' ordering program. Uses simple nested loops.
--- Task 02 - Basic 'Treasure Island' conditional game. Uses simple nested loops.
-
-Day 04
--- Create a rock paper scissors game using if/else statements and the random module.
-
-Day 05
--- Create a password generator using lists, loops, and the random module.
-
-Day 06
--- Today's task was various challenges using the Reeborg's World learning challenges on reeborg.ca - these were a lot of fun, and made me laugh the entire time. I would highly recommend them. I will not be giving away the solutions for these!
-
-Day 07 -- Making a hangman game!
-
-Day 08 -- Creating a ceasar cipher, practicing input validation and rate limiting.
+Day 01 - Basic input/output and variable practice.
+Day 02 - Basic tip calculator using numbers and simple math.
+Day 03 - Pizza ordering program and Treasure Island game using conditional loops
+Day 04 - Create a rock paper scissors game using if/else statements and the random module.
+Day 05 - Create a password generator using lists, loops, and the random module.
+Day 06 - Reeborg's World learning challenges on reeborg.ca
+Day 07 - Making a hangman game!
+Day 08 - Creating a ceasar cipher, practicing input validation and rate limiting.
+Day 09 - Silent Auction program - pracice working with dictionaries.
