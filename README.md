@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 100 Days of Python !
 =======
 Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp by Angela Yu' on Udemy.com
 ----------
 Taking this course to practice and refine my python skills!
 The programs on this github are mine and correspond to the daily challenges in this course during the time I was enrolled. Some of them were guided via course instruction, others were 'challenges' to show learning and comprehension.
->>>>>>> c9466b6 (Day 09 and README update)
 
 
 Day 01 - Basic input/output and variable practice.
