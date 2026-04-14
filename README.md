@@ -24,3 +24,4 @@ Day 08 - Creating a ceasar cipher, practicing input validation and rate limiting
 
 Day 09 - Silent Auction program - pracice working with dictionaries.
 
+Day 10 - Creating a calculator - functions, return statements, loops, booleans
