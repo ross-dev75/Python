@@ -12,110 +12,108 @@ logo = r"""
 """
 
 def get_card():
+    """ Draw's a card from a list of numbers representing one complete suit."""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     return random.choice(cards)
 
+
+
 def total_score(hand):
-    total = 0
-    for card in hand:
-        total += card
-    return total
+    """Calculates the total score given a hand. If there's an ace in the hand (11) and the total score goes over 21,
+    the value of the ace changes to (1)"""
+    if 11 in hand and sum(hand) > 21:
+        hand.remove(11)
+        hand.append(1)
+    return sum(hand)
+
+
+
+def compare_scores(player_score, computer_score):
+    """Compares the user score against the computer score. Prints both. Shows winner."""
+    if player_score == computer_score:
+        print(f"\nPlayer scores {player_score}. Computer scores {computer_score}. Draw!")
+    elif player_score > 21:
+        print(f"\n Player scores {player_score}. Computer scores {computer_score}. You went over! You lose!")
+    elif player_score == 21:
+        print(f"\nPlayer scores {player_score}. Computer scores {computer_score}. Blackjack! You win!")
+    elif player_score > computer_score:
+        print(f"\nPlayer scores {player_score}. Computer scores {computer_score}. You win!")
+    elif player_score < computer_score:
+        if computer_score > 21:
+            print(f"\nPlayer scores {player_score}. Computer scores {computer_score}. Computer went over! You Win!")
+        elif computer_score == 21:
+            print(f"\nPlayer scores {player_score}. Computer scores {computer_score}. Computer gets Blackjack! You lose!")
+        elif computer_score <= 20:
+            print(f"Player scores {player_score}. Computer scores {computer_score}. You lose. Computer Wins!")
+    else:
+        print(f"Player scores {player_score}. Computer scores {computer_score}.\n\nScoring function error...")
+
 
 
 def blackjack():
+    """
+    Game starts with two empty hands. Two cards delt to player and computer. Scores taken. Player cards revealed,
+    computer's first card revealed. Player can end turn, or draw card(s). They can keep drawing cards until they end
+    their turn by a) not drawing another card, or b) scoring over 21.
+    Computer starts drawing when the player's turn is finished. If the computer has less than 18 points and less points
+    than the player, it will draw as long as the player's total score wasn't higher than 21. The computer will otherwise
+    end its turn.
+    The game will print out the player and computer hands, calculate the scores, compare the scores, and declare
+    a winner. The game will end.
+    """
     print(logo)
     players_hand =[]
     computers_hand =[]
-    # get player cards and score
-    players_hand.append(get_card())
-    players_hand.append(get_card())
+
+    for _ in range(2):
+        players_hand.append(get_card())
+        computers_hand.append(get_card())
+
     player_score = total_score(players_hand)
-    # get computer card and initial score
-    computers_hand.append(get_card())
     computer_score = total_score(computers_hand)
-    #show cards, score
+
     print(f"Your cards: {players_hand}")
     print(f"Your current score is {player_score}")
     print(f"Computer's first card: [{computers_hand[0]}]")
-    # account for the 'ace', which starts with a value of 11 and decreases to a value of 1 as-needed
-    ace_high = False
-    for card in players_hand:
-        if card == 11:
-            ace_high = True
-    # did the player get an ace and a face card? game over, they win! if not, 'play on'...
-    play_on = True
+
+    play_on_player = True
+    play_on_computer = False
     if player_score == 21:
-        play_on = False
+        play_on_player = False
 
-
-    # let's play the game!
-    while play_on and player_score < 21:
-        draw = input("type 'y' to get another card. type 'n' to pass: ")
-
-        if draw == "y":
-            if ace_high:
-                # if the ace is high and the player 'busts', we need to reduce the value of the ace to 1.
-                players_hand.append(get_card())
-                player_score = total_score(players_hand)
-                if player_score > 21:
-                    for card in players_hand:
-                        if card == 11:
-                            players_hand.remove(card)
-                            players_hand.append(1)
-                            player_score = total_score(players_hand)
-                print(f"Your cards: {players_hand}")
-                print(f"Your current score is {player_score}")
-            else:
-                players_hand.append(get_card())
-                player_score = total_score(players_hand)
-                print(f"Your cards: {players_hand}")
-                print(f"Your current score is {player_score}")
-
-
-        if draw == "n":
-            # if the player stops drawing cards and isn't at or over 21, it's the computers turn to draw.
-            while computer_score < 19:
-                computers_hand.append(get_card())
-                computer_score = total_score(computers_hand)
-                print(f"Computer cards: {computers_hand}")
-                print(f"Computer current score is {computer_score}")
-                play_on = False
-
-    if player_score > 21:
-        print("\n")
-        print(f"Your final hand: {players_hand}, final score: {player_score}")
-        print("\n")
-        print("Your score is higher than 21.")
-        print("You went over! YOU LOSE!! :(")
-        print("\n")
-        print(f"The computer wins with {computers_hand}, scoring {computer_score}")
-    elif player_score == 21:
-        print("\n")
-        print(f"Your final hand: {players_hand}")
-        print(f"Computer's final hand: {computers_hand}, final score: {computer_score}")
-        print("\n")
-        print(f"Your total score is {player_score}. YOU WIN !!! :)")
-    elif player_score < computer_score:
-        if computer_score > 21:
-            print("\n")
-            print(f"Your final hand: {players_hand}, final score: {player_score}")
-            print(f"Computer's final hand: {computers_hand}, final score: {computer_score}")
-            print("\n")
-            print("Computer went over! YOU WIN !!! :)")
-        else:
-            print("\n")
-            print(f"Your final hand: {players_hand}, final score: {player_score}")
-            print(f"Computer's final hand: {computers_hand}, final score: {computer_score}")
-            print("\n")
-            print("You were beat by the computer! YOU LOSE!! :(")
-    elif player_score == computer_score:
+    while play_on_player:
         if player_score < 21:
-            print(f"Your final hand: {players_hand}, final score: {player_score}")
-            print(f"Computer's final hand: {computers_hand}, final score: {computer_score}")
-            print("\n")
-            print("Player and Computer draw! Play again soon!")
-    else:
-        print("Unexpected Error")
+            draw = input("type 'y' to get another card. type 'n' to pass: ")
+            if draw == "y":
+                players_hand.append(get_card())
+                player_score = total_score(players_hand)
+                print(f"Your cards: {players_hand}, your current score is {player_score}")
+
+            if draw == "n":
+                play_on_player = False
+                play_on_computer = True
+        elif player_score >= 21:
+            play_on_player = False
+            play_on_computer = True
+
+    while play_on_computer:
+        if computer_score < 18:
+            if computer_score < player_score:
+                if player_score <= 21:
+                    computers_hand.append(get_card())
+                    computer_score = total_score(computers_hand)
+                else:
+                    play_on_computer = False
+            else:
+                play_on_computer = False
+        else:
+            play_on_computer = False
+
+    print(f"Players hand: {players_hand}")
+    print(f"Computer's hand: {computers_hand}")
+    compare_scores(player_score, computer_score)
+
+
 
 prompt = True
 while prompt:
@@ -127,5 +125,3 @@ while prompt:
         prompt = False
     else:
         print("Invalid input.")
-
-
