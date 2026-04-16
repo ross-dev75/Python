@@ -1,7 +1,7 @@
 100 Days of Python !
 =======
 Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp by Angela Yu' on Udemy.com
-----------
+-------
 Taking this course to practice and refine my python skills!
 The programs on this github are mine and correspond to the daily challenges in this course during the time I was enrolled. Some of them were guided via course instruction, others were 'challenges' to show learning and comprehension.
 
@@ -27,3 +27,5 @@ Day 09 - Silent Auction program - pracice working with dictionaries.
 Day 10 - Creating a calculator - functions, return statements, loops, booleans
 
 Day 11 - Creating a BlackJack poker game in terminal
+
+Day 12 - Creating a number guessing game - global variables, functions that return values
