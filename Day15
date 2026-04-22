@@ -1,0 +1,126 @@
+MENU = {
+    "espresso": {
+        "ingredients": {
+            "water": 50,
+            "coffee": 18,
+        },
+        "cost": 1.5,
+    },
+    "latte": {
+        "ingredients": {
+            "water": 200,
+            "milk": 150,
+            "coffee": 24,
+        },
+        "cost": 2.5,
+    },
+    "cappuccino": {
+        "ingredients": {
+            "water": 250,
+            "milk": 100,
+            "coffee": 24,
+        },
+        "cost": 3.0,
+    }
+}
+
+resources = {
+    "water": 300,
+    "milk": 200,
+    "coffee": 100,
+}
+
+def pull_ingredients(resource, drank):
+    """ Removes the resources to make the drink from the existing list of resources """
+    resource["water"] = resource["water"] - drank["ingredients"]["water"]
+    resource["coffee"] = resource["coffee"] - drank["ingredients"]["coffee"]
+    try:
+        resource["milk"] = resource["milk"] - drank["ingredients"]["milk"]
+    except KeyError:
+        resource["milk"] = resource["milk"]
+    return resource
+
+
+def check_resources(resource, drank):
+    """ Checks the list of resources for the required drink ingredients"""
+    if resource["water"] - drank["ingredients"]["water"] >= 0:
+        if resource["coffee"] - drank["ingredients"]["coffee"] >=0:
+            try:
+                if resource["milk"] - drank["ingredients"]["milk"] >= 0:
+                    return True
+            except KeyError:
+                return True
+        else:
+            return False
+    else:
+        return False
+
+
+def process_coins(resource, drank):
+    """ Pay for the drink - once payment is successful, we call a function to remove the required ingredients from our resources."""
+    drank_cost = drank["cost"]
+    print("Please insert coins.")
+    quarters = int(input("How many quarters? :")) * 0.25
+    dimes = int(input("How many dimes? :")) * 0.10
+    nickles = int(input("How many nickles? :")) * 0.05
+    pennies = int(input("How many pennies? :")) * 0.01
+    customer_cash = quarters + dimes + nickles + pennies
+
+    if customer_cash == drank_cost:
+        resource["money"] += drank_cost
+        pull_ingredients(resources, drank)
+        print("Here's your drink!")
+        return resource
+    elif customer_cash > drank_cost:
+        resource["money"] += drank_cost
+        pull_ingredients(resource, drank)
+        change_required = customer_cash - drank_cost
+        change_required = round(change_required, 2)
+        print(f"Here's your latte. Enjoy! Your change is ${change_required} dollars.")
+        return resource
+    else:
+        print("Sorry, that's not enough money. Money refunded.")
+        return resource
+
+
+resources["money"] = 0
+prompt = True
+input_errors = 0
+
+while prompt:
+    if input_errors == 0:
+        prompt = False
+    while input_errors < 5:
+        selection = input("What would you like? (espresso/latte/cappuccino): ").lower()
+
+        if selection == "off":
+            prompt = False
+            break
+
+        elif selection == "report":
+            for key, value in resources.items():
+                print(key, value)
+
+        elif selection == "espresso":
+            available = check_resources(resources, MENU["espresso"])
+            if available:
+                process_coins(resources, MENU["espresso"])
+            else:
+                print("Sorry, that drink is not currently available.")
+
+        elif selection == "latte":
+            available = check_resources(resources, MENU["latte"])
+            if available:
+                process_coins(resources, MENU["latte"])
+            else:
+                print("Sorry, that drink is not currently available.")
+
+        elif selection == "cappuccino":
+            available = check_resources(resources, MENU["cappuccino"])
+            if available:
+                process_coins(resources, MENU["cappuccino"])
+            else:
+                print("Sorry, that drink is not currently available.")
+        else:
+            print("Sorry, that's an invalid option.")
+            input_errors += 1

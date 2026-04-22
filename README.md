@@ -33,3 +33,5 @@ Day 12 - Creating a number guessing game - global variables, functions that retu
 Day 13 - Debugging practice.
 
 Day 14 - Creating a higher/lower game (relies on import files not uploaded to this repository)
+
+Day 15 - Coffee Machine Capstone Project - Beginner
