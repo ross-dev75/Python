@@ -37,3 +37,5 @@ Day 14 - Creating a higher/lower game (relies on import files not uploaded to th
 Day 15 - Coffee Machine Capstone Project - Beginner
 
 Days 16 and 17 - Introduction to the concept of Object Oriented Programming
+
+Day 18 - Using the turtle module and getting familiar with methods, classes.
