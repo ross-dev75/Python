@@ -10,7 +10,7 @@ Day 01 - Basic input/output and variable practice.
 
 Day 02 - Basic tip calculator using numbers and simple math.
 
-Day 03 - Pizza ordering program and Treasure Island game using conditional loops
+Day 03 - Pizza ordering program and Treasure Island game using conditional loops.
 
 Day 04 - Create a rock paper scissors game using if/else statements and the random module.
 
@@ -24,18 +24,20 @@ Day 08 - Creating a ceasar cipher, practicing input validation and rate limiting
 
 Day 09 - Silent Auction program - pracice working with dictionaries.
 
-Day 10 - Creating a calculator - functions, return statements, loops, booleans
+Day 10 - Creating a calculator - functions, return statements, loops, booleans.
 
-Day 11 - Creating a BlackJack poker game in terminal
+Day 11 - Creating a BlackJack poker game in terminal.
 
-Day 12 - Creating a number guessing game - global variables, functions that return values
+Day 12 - Creating a number guessing game - global variables, functions that return values.
 
 Day 13 - Debugging practice.
 
-Day 14 - Creating a higher/lower game (relies on import files not uploaded to this repository)
+Day 14 - Creating a higher/lower game (relies on import files not uploaded to this repository).
 
-Day 15 - Coffee Machine Capstone Project - Beginner
+Day 15 - Coffee Machine Capstone Project - Beginner.
 
-Days 16 and 17 - Introduction to the concept of Object Oriented Programming
+Days 16 and 17 - Introduction to the concept of Object Oriented Programming.
 
 Day 18 - Using the turtle module and getting familiar with methods, classes.
+
+Day 19 - Using the turtle module to practice coordinates, listening methods, and pop up prompts. Make multiple objects from a class and store them in an empty list using a 'for _ in range) loop.
