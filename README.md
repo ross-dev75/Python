@@ -40,4 +40,4 @@ Days 16 and 17 - Introduction to the concept of Object Oriented Programming.
 
 Day 18 - Using the turtle module and getting familiar with methods, classes.
 
-Day 19 - Using the turtle module to practice coordinates, listening methods, and pop up prompts. Make multiple objects from a class and store them in an empty list using a 'for _ in range) loop.
+Day 19 - Using the turtle module to practice coordinates, listening methods, and pop up prompts. Make multiple objects from a class and store them in an empty list using a 'for _ in range' loop.
