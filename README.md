@@ -1,9 +1,8 @@
 100 Days of Python !
 =======
-Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp by Angela Yu' on Udemy.com
+Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp' by Angela Yu
+-------
 
-Taking this course to practice and refine my python skills!
-The programs on this github are mine and correspond to the daily challenges in this course during the time I was enrolled. Some of them were guided via course instruction, others were 'challenges' to show learning and comprehension.
 
 Highlights:
 Days 20-21 - snek_game.py - remake of the classic 'Snake' game.
