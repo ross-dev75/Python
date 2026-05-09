@@ -1,9 +1,13 @@
 100 Days of Python !
 =======
 Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp by Angela Yu' on Udemy.com
--------
+
 Taking this course to practice and refine my python skills!
 The programs on this github are mine and correspond to the daily challenges in this course during the time I was enrolled. Some of them were guided via course instruction, others were 'challenges' to show learning and comprehension.
+
+Highlights:
+Days 20-21 - snek_game.py - remake of the classic 'Snake' game.
+
 
 
 Day 01 - Basic input/output and variable practice.
@@ -40,4 +44,6 @@ Days 16 and 17 - Introduction to the concept of Object Oriented Programming.
 
 Day 18 - Using the turtle module and getting familiar with methods, classes.
 
-Day 19 - Using the turtle module to practice coordinates, listening methods, and pop up prompts. Make multiple objects from a class and store them in an empty list using a 'for _ in range' loop.
+Day 19 - Using the turtle module to practice coordinates, listening methods, and pop up prompts.
+
+Days 20 and 21 - Remaking the classic 'Snake' game using the turtle module and others.
