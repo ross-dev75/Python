@@ -1,5 +1,3 @@
-100 Days of Python !
-=======
 Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp' by Angela Yu
 -------
 
@@ -7,7 +5,7 @@ Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp' by Angela Yu
 Highlights:
 
 Days 20-21 - snek_game.py - remake of the classic 'Snake' game.
-
+----------
 
 
 Day 01 - Basic input/output and variable practice.
