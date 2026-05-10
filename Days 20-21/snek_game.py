@@ -12,7 +12,6 @@ UP = 90
 LEFT = 180
 DOWN = 270
 RIGHT = 0
-
 # For Scoreboard Class #
 ALIGNMENT = "center"
 FONT = ("Courier", 12, "normal")
@@ -22,12 +21,10 @@ TOXIC_SNAKE_FRIEND = ["Ur better than that.", "Are u proud of that score?", "Som
                      "Ur fired.", "*fart*", "Watch where you crawl!", "skill issue?", "Dont start crying...",
                      "Im telling your boss.", "*yawn*", "That was... neat.", "U shld see an eye doctor.",
                      "Are u fo real...?", "Hope no one saw that.", "I thought u wanted to play?"
-                     "*vomit*", "U shld uninstall...", "*rain noises*", "*silent fart*", "Back to work, you."
+                     "*vomit*", "U shld uninstall...", "*rain noises*", "*slow fart*", "Back to work, you."
                      "Plz don't go...", "But we just started...", "Quitters never win...",
-                     "U know ur gonna be back...", "*cackle*", "shh.. sleep now...",
-                     "Dnt give up on us...", "You need help."]
-
-
+                     "See you soon.'", "*cackle*", "shh... sleep now...",
+                     "Why not give up?", "Seek help."]
 
 class Snake:
     """ Creates the Snake """
@@ -37,26 +34,24 @@ class Snake:
         self.create_snake()
         self.head = self.snake_body[0]
 
-
     def create_snake(self):
         """ create the snake segments, add to the snake body, and position at center """
         x = 0
         for _ in range(0, 3):
-            segment = Turtle("square")
-            segment.color("white")
-            segment.penup()
-            segment.goto(x, 0)
+            starting_segment = Turtle("square")
+            starting_segment.color("white")
+            starting_segment.penup()
+            starting_segment.goto(x, 0)
             self.snake_body.append(segment)
             x -= 20
 
     def grow(self):
-        new_x = self.snake_body[-1].xcor()
-        new_y = self.snake_body[-1].ycor()
-        segment = Turtle("square")
-        segment.color("white")
-        segment.penup()
-        segment.goto(new_x, new_y)
-        self.snake_body.append(segment)
+        """ adds a new snake segment to the body of the snake """
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup()
+        new_segment.goto(self.snake_body[-1].xcor, self.snake_body[-1].ycor)
+        self.snake_body.append(new_segment)
 
     def move(self):
         """ moves the snake from back to front to keep the snake together """
@@ -86,7 +81,6 @@ class Snake:
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
-
 class Food(Turtle):
     """ Creates the Food """
     def __init__(self):
@@ -105,7 +99,6 @@ class Food(Turtle):
         random_x = random.randint(-280, 280)
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
-
 
 class Scoreboard(Turtle):
     """ Creates the Scoreboard"""
@@ -142,7 +135,6 @@ class Scoreboard(Turtle):
         self.write("You ran into yourself.", True, align=ALIGNMENT, font=GAME_OVER_FONT)
 
 # ________________ Main Program______________ #
-
 # game difficulty settings (screen refresh rate)
 insane_mode = 0.05
 standard_game = 0.1
@@ -173,7 +165,7 @@ snek = Snake()
 # create the food object
 nomnom = Food()
 
-# pressing an arrow key calls a method that changes the snakes direction
+# pressing an arrow key calls a method that changes the direction of the snake head
 screen.listen()
 screen.onkey(snek.up, "Up")
 screen.onkey(snek.down, "Down")
@@ -193,19 +185,18 @@ while game_is_on:
         snek.grow()
         scoreboard.increase_score()
 
-    # detect collision with wall
+    # detect collision with wall and end game
     if snek.head.xcor() > 290 or snek.head.xcor() < -290 or snek.head.ycor() > 290 or snek.head.ycor() < -290:
         game_is_on = False
         scoreboard.game_over()
         scoreboard.watch_walls()
 
-
-    # detect collision with tail
-    for segment in range(len(snek.snake_body) - 1, 2, -1):
-        if snek.head.distance(snek.snake_body[segment]) < 10:
+    # detect collision with tail and end game
+    for segment in snek.snake_body[1:]: # <- better than 'for segment_number in range(len(snake_body) -1, 1, -1):'
+        if snek.head.distance(segment) < 10:
             game_is_on = False
             scoreboard.game_over()
             scoreboard.watch_yourself()
 
-# the program will stop with a mouse click (most of the time). It can also be closed out.
+# turtle module - 'Screen' method to exit the screen with a mouse click
 screen.exitonclick()
