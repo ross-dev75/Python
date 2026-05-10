@@ -16,14 +16,13 @@ RIGHT = 0
 ALIGNMENT = "center"
 FONT = ("Courier", 12, "normal")
 GAME_OVER_FONT = ("Courier", 12, "bold")
-SCORE = []
 TOXIC_SNAKE_FRIEND = ["Ur better than that.", "Are u proud of that score?", "Someone needs coffee...",
                      "Ur fired.", "*fart*", "Watch where you crawl!", "Skill issue?", "Dont start crying...",
                      "Im telling your boss.", "*yawn*", "That was... neat.", "U shld see an eye doctor.",
-                     "Are u fo real...?", "Hope no one saw that.", "I thought u wanted to play?"
-                     "*vomit*", "U shld uninstall...", "*rain noises*", "*slow fart*", "Back to work, you."
+                     "R u fo real...?", "Hope no one saw that.", "I thought u wanted to play?",
+                     "*vomit*", "U shld uninstall...", "*rain noises*", "*slow fart*", "Back to work, you.",
                      "Plz don't go...", "But we just started...", "Quitters never win...",
-                     "See you soon.'", "*cackle*", "shh... sleep now...",
+                     "See you soon.", "*cackle*", "shh... sleep now...",
                      "Why not give up?", "Seek help."]
 
 class Snake:
@@ -90,9 +89,6 @@ class Food(Turtle):
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)
         self.color("blue")
         self.speed("fastest")
-        random_x = random.randint(-280, 280)
-        random_y = random.randint(-280, 280)
-        self.goto(random_x, random_y)
         self.refresh()
 
     def refresh(self):
@@ -104,6 +100,7 @@ class Scoreboard(Turtle):
     """ Creates the Scoreboard"""
     def __init__(self):
         super().__init__()
+        self.score = 0
         self.hideturtle()
         self.color("white")
         self.penup()
@@ -112,10 +109,10 @@ class Scoreboard(Turtle):
 
     def update_scoreboard(self):
         self.goto(0, 270)
-        self.write(f"Score = {len(SCORE)} ", True, align=ALIGNMENT, font=FONT)
+        self.write(f"Score = {self.score} ", True, align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
-        SCORE.append("nom")
+        self.score += 1
         self.clear()
         self.update_scoreboard()
 
