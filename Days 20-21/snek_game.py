@@ -18,7 +18,7 @@ FONT = ("Courier", 12, "normal")
 GAME_OVER_FONT = ("Courier", 12, "bold")
 SCORE = []
 TOXIC_SNAKE_FRIEND = ["Ur better than that.", "Are u proud of that score?", "Someone needs coffee...",
-                     "Ur fired.", "*fart*", "Watch where you crawl!", "skill issue?", "Dont start crying...",
+                     "Ur fired.", "*fart*", "Watch where you crawl!", "Skill issue?", "Dont start crying...",
                      "Im telling your boss.", "*yawn*", "That was... neat.", "U shld see an eye doctor.",
                      "Are u fo real...?", "Hope no one saw that.", "I thought u wanted to play?"
                      "*vomit*", "U shld uninstall...", "*rain noises*", "*slow fart*", "Back to work, you."
@@ -42,16 +42,16 @@ class Snake:
             starting_segment.color("white")
             starting_segment.penup()
             starting_segment.goto(x, 0)
-            self.snake_body.append(segment)
+            self.snake_body.append(starting_segment)
             x -= 20
 
     def grow(self):
         """ adds a new snake segment to the body of the snake """
-        new_segment = Turtle("square")
-        new_segment.color("white")
-        new_segment.penup()
-        new_segment.goto(self.snake_body[-1].xcor, self.snake_body[-1].ycor)
-        self.snake_body.append(new_segment)
+        segment = Turtle("square")
+        segment.color("white")
+        segment.penup()
+        segment.goto(self.snake_body[-1].xcor(), self.snake_body[-1].ycor())
+        self.snake_body.append(segment)
 
     def move(self):
         """ moves the snake from back to front to keep the snake together """
@@ -192,7 +192,7 @@ while game_is_on:
         scoreboard.watch_walls()
 
     # detect collision with tail and end game
-    for segment in snek.snake_body[1:]: # <- better than 'for segment_number in range(len(snake_body) -1, 1, -1):'
+    for segment in snek.snake_body[1:]:
         if snek.head.distance(segment) < 10:
             game_is_on = False
             scoreboard.game_over()
