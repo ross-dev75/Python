@@ -7,40 +7,12 @@ Highlights:
 Days 20-21 - snek_game.py - remake of the classic 'Snake' game.
 
 -------
-Day 01 - Basic input/output and variable practice.
+Days 1 - 15     -- Foundation
 
-Day 02 - Basic tip calculator using numbers and simple math.
+Days 16 - 17    -- Introduction to Object Oriented Programming.
 
-Day 03 - Pizza ordering program and Treasure Island game using conditional loops.
+Days 18 - 19    -- Learning the Turtle Module
 
-Day 04 - Create a rock paper scissors game using if/else statements and the random module.
+Days 20 - 21    -- Remaking the classic 'Snake' game.
 
-Day 05 - Create a password generator using lists, loops, and the random module.
-
-Day 06 - Reeborg's World learning challenges on reeborg.ca
-
-Day 07 - Making a hangman game!
-
-Day 08 - Creating a ceasar cipher, practicing input validation and rate limiting.
-
-Day 09 - Silent Auction program - pracice working with dictionaries.
-
-Day 10 - Creating a calculator - functions, return statements, loops, booleans.
-
-Day 11 - Creating a BlackJack poker game in terminal.
-
-Day 12 - Creating a number guessing game - global variables, functions that return values.
-
-Day 13 - Debugging practice.
-
-Day 14 - Creating a higher/lower game (relies on import files not uploaded to this repository).
-
-Day 15 - Coffee Machine Capstone Project - Beginner.
-
-Days 16 and 17 - Introduction to the concept of Object Oriented Programming.
-
-Day 18 - Using the turtle module and getting familiar with methods, classes.
-
-Day 19 - Using the turtle module to practice coordinates, listening methods, and pop up prompts.
-
-Days 20 and 21 - Remaking the classic 'Snake' game using the turtle module and others.
+Day 22          -- Remaking the classic 'Pong' game.
