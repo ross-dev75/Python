@@ -1,1 +1,3 @@
-test readme in snake folder
+This program is a compilation of four programs, one for each class, with three initially imported into main as modules.
+
+There is a slight lag when trying to change the direction of the snake (unless you're playing on 'insane' mode)...
