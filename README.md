@@ -7,6 +7,8 @@ Days 16 - 17    -- Introduction to Object Oriented Programming.
 
 Days 18 - 19    -- Learning the Turtle Module
 
-Days 20 - 21    -- Remaking the classic 'Snake' game.
+Days 20 - 21    -- Remaking 'Snake' with the turtle module.
 
-Day 22          -- Remaking the classic 'Pong' game.
+Day 22          -- Remaking 'Pong' with the turtle module.
+
+Day 23          -- Remaking 'Frogger' with the turtle module.
