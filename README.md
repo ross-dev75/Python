@@ -7,4 +7,4 @@ Days 17 - 23    : Creating Basic Games
 
 Day 24 - 26     : Learning Pandas and Using CSV Data
 
-Day 27          : Creating a Miles to KM GUI program using tkinter.
+Days 27 - 30    : Creating GUI programs with tkinter
