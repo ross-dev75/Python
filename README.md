@@ -1,10 +1,26 @@
-Enrolled in '100 Days of Code™: The Complete Python Pro Bootcamp' by Angela Yu
--------
+# python-fundamentals
 
-Days 1 - 16     : Foundation
+A collection of Python exercises and small projects from self-paced study,
+organized by category.
 
-Days 17 - 23    : Creating Basic Games
+## Contents
 
-Day 24 - 26     : Learning Pandas and Using CSV Data
+- **fundamentals/** — syntax, control flow, data structures, and early projects
+- **oop/** — object-oriented programming practice
+- **turtle-graphics/** — drawing exercises using the `turtle` module
+- **games/** — small playable games (Snake, Pong, Quiz, and more)
+- **data/** — CSV data wrangling with pandas
+- **gui/** — Tkinter desktop apps
 
-Days 27 - 30    : Creating GUI programs with tkinter
+## Notable projects
+
+- `gui/password-manager/` — encrypted credential vault using PBKDF2 + Fernet
+- `gui/pomodoro-timer/` — full Pomodoro timer with session sequencing and audio alerts
+- `games/snake/` — Snake game with OOP architecture and difficulty selection
+- `games/pong/` — two-player Pong with speed ramping
+
+## Origin
+
+This started as course exercises from a self-paced Python class. Files have
+been reorganized by category and renamed to describe the work itself rather
+than the course day they came from.
