@@ -85,7 +85,7 @@ window.title("Pomodoro Timer")
 window.geometry("400x400")
 
 # --- Asset Management ---
-image = Image.open(r"C:\Users\jukof\Pictures\sisyphus_unbothered.jpg")
+image = Image.open("background.jpg")  # replace with a local image path
 image = image.resize((400, 400))
 photo = ImageTk.PhotoImage(image)
 
