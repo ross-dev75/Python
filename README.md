@@ -3,7 +3,7 @@
 A collection of Python exercises and small projects from self-paced study,
 organized by category.
 
-Includes some coursework from Angela Yu's 100 Days of Code. Some programs improved (see password-manager).
+- Includes some coursework from Angela Yu's 100-Days-of-Code with certain programs improved (see password-manager).
 
 ## Contents
 
@@ -25,4 +25,5 @@ Includes some coursework from Angela Yu's 100 Days of Code. Some programs improv
 
 This started as course exercises from a self-paced Python class. Files have
 been reorganized by category and renamed to describe the work itself rather
-than the course day they came from.
+than the course they came from. I've used Claude Code to help with README
+files and reorganization along with occasional debugging and improvements.
