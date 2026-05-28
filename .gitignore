@@ -19,6 +19,7 @@ __pycache__/
 
 # Claude Code local settings
 .claude/
+CLAUDE.md
 
 # Vault / personal data — never commit credentials, encrypted or not
 data.enc
