@@ -17,6 +17,9 @@ __pycache__/
 *.swp
 *.swo
 
+# Claude Code local settings
+.claude/
+
 # Vault / personal data — never commit credentials, encrypted or not
 data.enc
 data.txt
