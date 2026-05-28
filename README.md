@@ -2,7 +2,8 @@
 
 A collection of Python exercises and small projects from self-paced study,
 organized by category.
-- Includes coursework from Angela Yu's 100 Days of Code. Some programs improved (see password-manager).
+
+Includes some coursework from Angela Yu's 100 Days of Code. Some programs improved (see password-manager).
 
 ## Contents
 
