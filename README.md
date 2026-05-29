@@ -13,6 +13,7 @@ organized by category.
 - **games/** — small playable games (Snake, Pong, Quiz, and more)
 - **data/** — CSV data wrangling with pandas
 - **gui/** — Tkinter desktop apps
+- **api/** — HTTP API consumption and alerting scripts
 
 ## Notable projects
 
@@ -20,6 +21,7 @@ organized by category.
 - `gui/pomodoro-timer/` — full Pomodoro timer with session sequencing and audio alerts
 - `games/snake/` — Snake game with OOP architecture and difficulty selection
 - `games/pong/` — two-player Pong with speed ramping
+- `api/iss-tracker-with-alerts/` — tracks the ISS and sends email alerts when it passes overhead at night
 
 ## Origin
 
